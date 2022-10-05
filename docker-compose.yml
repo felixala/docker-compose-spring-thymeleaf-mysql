@@ -15,7 +15,12 @@ services:
       - springboot-net
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE = employee
+      - MYSQL_DATABASE=employee
+    volumes:
+      - app_data:/var/lib/mysql
 
 networks:
   springboot-net:
+
+volumes:
+  app_data:
